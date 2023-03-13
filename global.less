@@ -1,0 +1,67 @@
+@fnColor: #fff;
+@img: '../images';
+@svg: '../svg';
+@bodycolor: #084374;
+@w: 1920;
+@h: 1080;
+@ow: 100vw;
+@oh: 100vh;
+@hh: ();
+@fnF: Square721 Cn BT Roman;
+@scolor: #1cc4ff;
+
+// 自适应宽
+.wCalc(@width) {
+  width: calc(@width / @w * 100vw);
+}
+.mwCalc(@width) {
+  min-width: calc(@width / @w * @ow);
+}
+.mhCalc(@height) {
+  min-height: calc(@height / @h * @oh);
+}
+// 自适应高
+.hCalc(@height) {
+  height: calc(@height / @h * 100vh);
+}
+
+// 自适应行高
+.lhCalc(@height) {
+  line-height: calc(@height / @h * 100vh);
+}
+
+// 自适应 padding
+.pCalc(@t, @r, @b, @l) {
+  box-sizing: border-box;
+  padding: calc(@t / @h * 100vh) calc(@r / @w * 100vw) calc(@b / @h * 100vh) calc(@l / @w * 100vw);
+}
+
+// 自适应 margin
+.mCalc(@t, @r, @b, @l) {
+  margin: calc(@t / @h * 100vh) calc(@r / @w * 100vw) calc(@b / @h * 100vh) calc(@l / @w * 100vw);
+}
+
+.tCalc(@top) {
+  top: calc(@top / @h * @oh);
+}
+
+.bCalc(@bottom) {
+  bottom: calc(@bottom / @h * @oh);
+}
+
+.lCalc(@left) {
+  left: calc(@left / @w * @ow);
+}
+
+.rCalc(@right) {
+  right: calc(@right / @w * @ow);
+}
+
+// 自适应字体（安装宽计算时等同于 rem）
+.fCalc(@s) {
+  font-size: calc(@s / 1920 * 100vw);
+}
+
+.fontF {
+  font-family: Square721 Cn BT Roman;
+}
